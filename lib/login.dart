@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:habito/landing.dart';
+import 'package:habito/home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -101,6 +101,44 @@ class _LoginPageState extends State<LoginPage> {
                   flex: 1,
                   child: SizedBox(),
                 ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(20, 0, 20, 100),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            new Center(
+                              child: Text(
+                                "Masuk",
+                                style: TextStyle(
+                                    fontSize: 32,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xffFB9C44)),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            new Center(
+                              child: Text(
+                                "Silahkan masuk akun terlebih dahulu",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color(0xff686777)),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]),
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -199,21 +237,6 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         errorMessage: "Password cannot be empty",
-                        // style: TextStyle(fontSize: 18),
-                        // obscureText: _isObscure,
-                        // decoration: InputDecoration(
-                        //     border: InputBorder.none,
-                        //     fillColor: Color(0xfff3f3f4),
-                        //     filled: true,
-                        //     suffixIcon: IconButton(
-                        //         icon: Icon(_isObscure
-                        //             ? Icons.visibility
-                        //             : Icons.visibility_off),
-                        //         onPressed: () {
-                        //           setState(() {
-                        //             _isObscure = !_isObscure;
-                        //           });
-                        //         })))
                       )
                     ],
                   ),
@@ -259,7 +282,7 @@ class _LoginPageState extends State<LoginPage> {
                     // replace navigation to home page
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => LandingPage()),
+                      MaterialPageRoute(builder: (context) => HomeWidget()),
                     );
                   },
                   // onTap: _cekLogin,

@@ -55,6 +55,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             '@Dinda-Wahyu',
                             style: TextStyle(
                               fontFamily: 'Poppins',
+                              fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
                           )),

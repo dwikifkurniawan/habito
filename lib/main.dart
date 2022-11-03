@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Hábito',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
       ),
       home: LauncherPage(),
       routes: <String, WidgetBuilder>{

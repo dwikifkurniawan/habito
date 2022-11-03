@@ -1,6 +1,6 @@
-# habito
+# Hábito
 
-A new Flutter project.
+An application that is used to track the habits that you want or are building.
 
 ## Getting Started
 

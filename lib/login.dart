@@ -240,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
                             end: Alignment.centerRight,
                             colors: [Color(0xfffbb448), Color(0xfff7892b)])),
                     child: Text(
-                      'Login',
+                      'Masuk',
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ),

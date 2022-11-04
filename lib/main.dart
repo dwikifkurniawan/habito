@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       home: LauncherPage(),
       routes: <String, WidgetBuilder>{
         '/login': (BuildContext context) => new LoginPage(),
-        '/landing': (BuildContext context) => new LandingPage()
+        '/landing': (BuildContext context) => new LandingPage(),
       },
     );
   }

@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  dropdown_button2:
+    dependency: "direct main"
+    description:
+      name: dropdown_button2
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.8.9"
   fake_async:
     dependency: transitive
     description:
@@ -148,7 +155,9 @@ packages:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "10.2.1"
+
+    version: "10.1.0"
+
   from_css_color:
     dependency: "direct main"
     description:
@@ -310,6 +319,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.11.1"
+
+  percent_indicator:
+    dependency: "direct main"
+    description:
+      name: percent_indicator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.2"
+
   petitparser:
     dependency: transitive
     description:
@@ -345,6 +363,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1"
+    
+  roundcheckbox:
+    dependency: "direct main"
+    description:
+      name: roundcheckbox
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.5"
+
   rxdart:
     dependency: transitive
     description:

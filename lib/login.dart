@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:habito/home.dart';
+import 'package:habito/register.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -286,6 +287,27 @@ class _LoginPageState extends State<LoginPage> {
                     );
                   },
                   // onTap: _cekLogin,
+                ),
+                Row(
+                  children: <Widget>[
+                    const Text('Belum punya akun?'),
+                    TextButton(
+                      child: const Text(
+                        'Daftar',
+                        style:
+                            TextStyle(fontSize: 18, color: Color(0xffFB9C44)),
+                      ),
+                      onPressed: () {
+                        //signup screen
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterPageWidget()),
+                        );
+                      },
+                    )
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.center,
                 ),
                 Expanded(
                   flex: 1,

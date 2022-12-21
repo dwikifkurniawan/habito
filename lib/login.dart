@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:habito/bottom_navi.dart';
 import 'package:habito/home.dart';
 import 'package:habito/register.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -283,7 +284,7 @@ class _LoginPageState extends State<LoginPage> {
                     // replace navigation to home page
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeWidget()),
+                      MaterialPageRoute(builder: (context) => BottomNav()),
                     );
                   },
                   // onTap: _cekLogin,

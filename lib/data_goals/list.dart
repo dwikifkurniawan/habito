@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:habito/theme_s.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class ListDataSekolah extends StatefulWidget {
   const ListDataSekolah({Key? key}) : super(key: key);
@@ -20,80 +21,105 @@ class _ListDataSekolahState extends State<ListDataSekolah> {
         child: Column(
           children: [
             Expanded(
-              child: Container(
-                width: double.infinity,
-                child: ListView(scrollDirection: Axis.vertical, children: [
-                  for (var i in jumlah_sekolah)
-                    Container(
-                      margin: EdgeInsets.only(top: 1),
-                      width: double.infinity,
-                      padding: EdgeInsets.all(13),
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              offset: Offset(0, 1),
-                              blurRadius: 0,
-                              color: shadow)
-                        ],
-                        color: Colors.white,
+              child: Column(
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.17,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Card(
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      color: Color(0xFFFFC48D),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Column(
-                                children: [
-                                  Image.asset("assets/images/sample.png")
-                                ],
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SelectionArea(
+                                child: Text(
+                              'Belajar Gitar',
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.normal,
                               ),
-                              SizedBox(width: 8),
-                              Column(
+                            )),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.8,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFFC48D),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
-                                    children: [
-                                      Text("Sekolah " + i.toString(),
-                                          style: bold14pt),
-                                    ],
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        5, 5, 5, 5),
+                                    child: Icon(
+                                      Icons.article_rounded,
+                                      color: Colors.black,
+                                      size: 24,
+                                    ),
                                   ),
                                   Row(
+                                    mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Text(i.toString() + " Username | ",
-                                          style: regular12ptpurple),
-                                      Text("DD/MM/YYYY",
-                                          style: regular12ptpurple),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                              Expanded(child: SizedBox()),
-                              Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      ElevatedButton(
-                                          child: Text("LIHAT"),
-                                          style: ButtonStyle(
-                                              backgroundColor:
-                                                  MaterialStateProperty.all<
-                                                      Color>(primaryOrange),
-                                              shape: MaterialStateProperty.all<
-                                                      RoundedRectangleBorder>(
-                                                  RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(10)),
-                                              ))),
-                                          onPressed: () => null),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            5, 5, 5, 5),
+                                        child: SelectionArea(
+                                            child: Text(
+                                          '6 task / 6 task',
+                                          style: TextStyle(
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.normal,
+                                          ),
+                                        )),
+                                      ),
                                     ],
                                   ),
                                 ],
                               ),
-                            ],
-                          ),
-                        ],
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.8,
+                              height: MediaQuery.of(context).size.height * 0.05,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFFFC48D),
+                              ),
+                              child: LinearPercentIndicator(
+                                percent: 1,
+                                width: MediaQuery.of(context).size.width * 0.75,
+                                lineHeight: 25,
+                                animation: true,
+                                progressColor: Color(0xFFFB9A43),
+                                backgroundColor: Color(0xFFF1F4F8),
+                                center: Text(
+                                  '100%',
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                barRadius: Radius.circular(60),
+                                padding: EdgeInsets.zero,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                ]),
+                  ),
+                ],
               ),
             ),
             SizedBox(

@@ -6,16 +6,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class AddGoalPage extends StatefulWidget {
-  AddGoalPage({Key? key}) : super(key: key);
+class addTaskPage extends StatefulWidget {
+  addTaskPage({Key? key}) : super(key: key);
 
   // final String title;
 
   @override
-  _AddGoalPageState createState() => _AddGoalPageState();
+  _addTaskPageState createState() => _addTaskPageState();
 }
 
-class _AddGoalPageState extends State<AddGoalPage> {
+class _addTaskPageState extends State<addTaskPage> {
   final TextEditingController judulController = TextEditingController();
   final TextEditingController deskripsiController = TextEditingController();
   bool visible = false;
@@ -61,7 +61,7 @@ class _AddGoalPageState extends State<AddGoalPage> {
                   padding: EdgeInsets.only(left: 10),
                 ),
                 Text(
-                  'Tambah Goal',
+                  'Tambah Task',
                   style: TextStyle(
                     color: textWhite,
                     fontSize: 18,
@@ -85,19 +85,19 @@ class _AddGoalPageState extends State<AddGoalPage> {
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Expanded(
                   flex: 1,
                   child: SizedBox(),
                 ),
-                // Visibility(
-                //     maintainSize: true,
-                //     maintainAnimation: true,
-                //     maintainState: true,
-                //     visible: visible,
-                //     child: Container(child: CircularProgressIndicator())),
+                Visibility(
+                    maintainSize: true,
+                    maintainAnimation: true,
+                    maintainState: true,
+                    visible: visible,
+                    child: Container(child: CircularProgressIndicator())),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 10),
                   child: Column(
@@ -146,7 +146,7 @@ class _AddGoalPageState extends State<AddGoalPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'Deskripsi',
+                        'Tanggal',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
                       ),
@@ -154,8 +154,8 @@ class _AddGoalPageState extends State<AddGoalPage> {
                         height: 10,
                       ),
                       TextField(
-                          controller: deskripsiController..text = '',
-                          style: TextStyle(fontSize: 18, height: 5.0),
+                          controller: judulController..text = '',
+                          style: TextStyle(fontSize: 18),
                           obscureText: false,
                           decoration: InputDecoration(
                             errorText: _errorMessageUser == ""

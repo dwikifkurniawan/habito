@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habito/addGoal.dart';
 import 'package:habito/data_goals/data_goal_proses.dart';
 import 'package:habito/data_goals/list.dart';
 import 'package:habito/theme_s.dart';
@@ -46,7 +47,7 @@ class _MyGoalsState extends State<MyGoals> with SingleTickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Goals Kamu',
+                    'My Goals',
                     style: TextStyle(
                       color: textWhite,
                       fontSize: 18,
@@ -56,8 +57,7 @@ class _MyGoalsState extends State<MyGoals> with SingleTickerProviderStateMixin {
                 ],
               ),
             ),
-
-            // container oren
+            // container search
             Container(
               padding: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 5),
               height: 80,
@@ -106,11 +106,9 @@ class _MyGoalsState extends State<MyGoals> with SingleTickerProviderStateMixin {
                 ],
               ),
             ),
-
             SizedBox(
               height: 10,
             ),
-
             Container(
               color: Colors.white,
               margin: EdgeInsets.all(10),
@@ -146,6 +144,14 @@ class _MyGoalsState extends State<MyGoals> with SingleTickerProviderStateMixin {
             )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AddGoalPage()));
+        },
+        child: Icon(Icons.add),
+        backgroundColor: primaryOrange,
       ),
     );
   }

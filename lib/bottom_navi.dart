@@ -24,7 +24,6 @@ class _BottomNavState extends State<BottomNav> {
   final List<Widget> body = [
     HomeWidget(),
     MyGoals(),
-    Notifikasi(),
     Review(),
     Notifikasi(),
     ProfilePageWidget()

@@ -86,7 +86,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                   child: Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: lightOrange,
+                    color: primaryOrange,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -98,7 +98,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           width: 100,
                           height: 80,
                           decoration: BoxDecoration(
-                            color: lightOrange,
+                            color: primaryOrange,
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -109,7 +109,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 '8',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: textBlack,
+                                  color: textWhite,
                                   fontSize: 16,
                                 ),
                               )),
@@ -118,7 +118,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 'Goals',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: textBlack,
+                                  color: textWhite,
                                   fontWeight: FontWeight.normal,
                                 ),
                               )),
@@ -129,7 +129,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           width: 100,
                           height: 80,
                           decoration: BoxDecoration(
-                            color: lightOrange,
+                            color: primaryOrange,
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -140,7 +140,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 '25',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: textBlack,
+                                  color: textWhite,
                                   fontSize: 16,
                                 ),
                               )),
@@ -149,7 +149,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 'Task',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: textBlack,
+                                  color: textWhite,
                                   fontWeight: FontWeight.normal,
                                 ),
                               )),

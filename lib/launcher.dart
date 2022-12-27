@@ -26,8 +26,7 @@ class _LauncherPageState extends State<LauncherPage> {
     var duration = const Duration(seconds: 5);
     return new Timer(duration, () {
       Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (_) {
-        // return slogin ? new LandingPage() : new LoginPage();
-        return slogin ? new BottomNav() : new BottomNav();
+        return slogin ? new LandingPage() : new LoginPage();
       }));
     });
   }

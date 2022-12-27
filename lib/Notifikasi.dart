@@ -78,77 +78,142 @@ class _NotifikasiState extends State<Notifikasi> {
                     child: ListView(
                       scrollDirection: Axis.vertical,
                       children: [
-                        for (var i in jumlah_jenis_barang)
-                          Container(
-                            height: 127,
-                            margin: EdgeInsets.only(
-                                bottom: 20, left: 20, right: 20),
-                            padding: EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                              color: lightGrey,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 3,
-                                  blurRadius: 7,
-                                  offset: Offset(
-                                      0, 3), // changes position of shadow
-                                ),
-                              ],
-                            ),
-                            child: Column(
-                              children: [
-                                Expanded(child: SizedBox()),
-                                Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Text("Notifikasi  " + i.toString(),
-                                            style: heading2Black),
-                                        Expanded(child: SizedBox()),
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(Icons.calendar_today,
-                                            color: Colors.black, size: 15),
-                                        SizedBox(width: 5),
-                                        Text("Released : ", style: regular14pt),
-                                        Text("xx-xx-xxxx",
-                                            style: regular14pt), //ISI TANGGAL
-                                        Expanded(child: SizedBox()),
-                                        ElevatedButton(
-                                            child: Text(
-                                              ("Lihat ").toUpperCase(),
-                                              style: regular12ptpink.copyWith(
-                                                  color: textWhite),
-                                              textAlign: TextAlign.center,
-                                            ),
-                                            style: ButtonStyle(
-                                                backgroundColor:
-                                                    MaterialStateProperty.all<
-                                                        Color>(primaryOrange),
-                                                shape: MaterialStateProperty.all<
-                                                        RoundedRectangleBorder>(
-                                                    RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.all(
-                                                          Radius.circular(5)),
-                                                ))),
-                                            onPressed: () => null),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
+                        Container(
+                          height: 127,
+                          margin:
+                              EdgeInsets.only(bottom: 20, left: 20, right: 20),
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: lightGrey,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 3,
+                                blurRadius: 7,
+                                offset:
+                                    Offset(0, 3), // changes position of shadow
+                              ),
+                            ],
                           ),
+                          child: Column(
+                            children: [
+                              Expanded(child: SizedBox()),
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text("Selamat, 1 task sudah dilaksanakan",
+                                          style: regular14pt),
+                                      Expanded(child: SizedBox()),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(Icons.calendar_today,
+                                          color: Colors.black, size: 15),
+                                      SizedBox(width: 5),
+                                      Text("Released : ", style: regular14pt),
+                                      Text("04-11-2022",
+                                          style: regular14pt), //ISI TANGGAL
+                                      Expanded(child: SizedBox()),
+                                      ElevatedButton(
+                                          child: Text(
+                                            ("Lihat ").toUpperCase(),
+                                            style: regular12ptpink.copyWith(
+                                                color: textWhite),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all<
+                                                      Color>(primaryOrange),
+                                              shape: MaterialStateProperty.all<
+                                                      RoundedRectangleBorder>(
+                                                  RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(5)),
+                                              ))),
+                                          onPressed: () => null),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 127,
+                          margin:
+                              EdgeInsets.only(bottom: 20, left: 20, right: 20),
+                          padding: EdgeInsets.all(15),
+                          decoration: BoxDecoration(
+                            color: lightGrey,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 3,
+                                blurRadius: 7,
+                                offset:
+                                    Offset(0, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: Column(
+                            children: [
+                              Expanded(child: SizedBox()),
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text("Kerjakan 6 task yang belum selesai",
+                                          style: regular14pt),
+                                      Expanded(child: SizedBox()),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Icon(Icons.calendar_today,
+                                          color: Colors.black, size: 15),
+                                      SizedBox(width: 5),
+                                      Text("Released : ", style: regular14pt),
+                                      Text("04-11-2022",
+                                          style: regular14pt), //ISI TANGGAL
+                                      Expanded(child: SizedBox()),
+                                      ElevatedButton(
+                                          child: Text(
+                                            ("Lihat ").toUpperCase(),
+                                            style: regular12ptpink.copyWith(
+                                                color: textWhite),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all<
+                                                      Color>(primaryOrange),
+                                              shape: MaterialStateProperty.all<
+                                                      RoundedRectangleBorder>(
+                                                  RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(5)),
+                                              ))),
+                                          onPressed: () => null),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),

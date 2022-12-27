@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Poppins',
+        backgroundColor: Colors.white,
       ),
       home: LauncherPage(),
       routes: <String, WidgetBuilder>{

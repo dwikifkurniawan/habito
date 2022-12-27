@@ -9,6 +9,7 @@ import 'package:habito/addGoal.dart';
 import 'package:habito/home.dart';
 import 'package:habito/profile.dart';
 import 'package:habito/theme_s.dart';
+import 'package:habito/review.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -22,7 +23,7 @@ class _BottomNavState extends State<BottomNav> {
   final List<Widget> body = [
     HomeWidget(),
     AddGoalPage(),
-    Notifikasi(),
+    Review(),
     Notifikasi(),
     ProfilePageWidget()
   ];

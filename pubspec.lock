@@ -155,9 +155,7 @@ packages:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-
     version: "10.1.0"
-
   from_css_color:
     dependency: "direct main"
     description:
@@ -319,7 +317,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.11.1"
-
   percent_indicator:
     dependency: "direct main"
     description:
@@ -327,7 +324,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.2"
-
   petitparser:
     dependency: transitive
     description:
@@ -363,7 +359,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1"
-    
   roundcheckbox:
     dependency: "direct main"
     description:
@@ -371,7 +366,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
-
   rxdart:
     dependency: transitive
     description:

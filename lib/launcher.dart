@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:habito/bottom_navi.dart';
 import 'dart:async';
 import './landing.dart';
 import './login.dart';
@@ -25,7 +26,8 @@ class _LauncherPageState extends State<LauncherPage> {
     var duration = const Duration(seconds: 5);
     return new Timer(duration, () {
       Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (_) {
-        return slogin ? new LandingPage() : new LoginPage();
+        // return slogin ? new LandingPage() : new LoginPage();
+        return slogin ? new BottomNav() : new BottomNav();
       }));
     });
   }

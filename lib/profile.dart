@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habito/theme_s.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -22,13 +23,14 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
     return Scaffold(
       key: scaffoldKey,
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
+                margin: EdgeInsets.only(top: 50.0),
                 width: double.infinity,
                 height: 150,
                 decoration: BoxDecoration(
@@ -66,7 +68,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           '@dindawr',
                           style: TextStyle(
                             fontFamily: 'Poppins',
-                            color: Color(0xFF9E9E9E),
+                            color: primaryOrange,
                           ),
                         )),
                       ),
@@ -84,7 +86,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                   child: Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Color(0xFFDD5C1D),
+                    color: lightOrange,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -96,7 +98,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           width: 100,
                           height: 80,
                           decoration: BoxDecoration(
-                            color: Color(0xFFDD5C1D),
+                            color: lightOrange,
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -107,7 +109,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 '8',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  color: textBlack,
                                   fontSize: 16,
                                 ),
                               )),
@@ -116,7 +118,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 'Goals',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  color: textBlack,
                                   fontWeight: FontWeight.normal,
                                 ),
                               )),
@@ -127,7 +129,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                           width: 100,
                           height: 80,
                           decoration: BoxDecoration(
-                            color: Color(0xFFDD5C1D),
+                            color: lightOrange,
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -138,7 +140,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 '25',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  color: textBlack,
                                   fontSize: 16,
                                 ),
                               )),
@@ -147,7 +149,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget> {
                                 'Task',
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  color: textBlack,
                                   fontWeight: FontWeight.normal,
                                 ),
                               )),

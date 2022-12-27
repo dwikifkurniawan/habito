@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:habito/Notifikasi.dart';
 import 'package:habito/addGoal.dart';
 import 'package:habito/home.dart';
+import 'package:habito/myGoals.dart';
 import 'package:habito/profile.dart';
 import 'package:habito/theme_s.dart';
 import 'package:habito/review.dart';
@@ -22,7 +23,8 @@ class _BottomNavState extends State<BottomNav> {
   int currentIndex = 0;
   final List<Widget> body = [
     HomeWidget(),
-    AddGoalPage(),
+    MyGoals(),
+    Notifikasi(),
     Review(),
     Notifikasi(),
     ProfilePageWidget()
